@@ -1,9 +1,94 @@
+/* wait for update(add) */
+.owl-carousel.owl-loading {
+	opacity: 0;
+	display: block;
+}
+
+.lg-outer .lg-item {
+	background: url(../images/loading.gif) center center no-repeat;
+	display: none !important;
+}
+
+.slick-loading .slick-track {
+	visibility: hidden;
+}
+
+.slick-slide.slick-loading img {
+	display: none;
+}
+
+.slick-loading .slick-list {
+	background: #ffffff url("./assets/images/ajax-loader.gif") center center no-repeat;
+}
+
+.linearicons-loading:before {
+	content: "\ebd0";
+}
+
+.linearicons-loading2:before {
+	content: "\ebd1";
+}
+
+.linearicons-loading3:before {
+	content: "\ebd2";
+}
+
 /*
-Theme Name: themex 
-
+*
+* Preloader
 */
-/*----------------------------------------
- Type Your Css Here
-------------------------------------------*/
+.preloader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 10000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	background: #ffffff;
+	transition: .3s all ease;
+}
 
+[data-x-mode='true'] .preloader, .preloader.loaded {
+	opacity: 0;
+	visibility: hidden;
+}
 
+[data-x-mode='true'] .preloader .object, .preloader.loaded .object {
+	animation: none;
+}
+
+.preloader-body {
+	text-align: center;
+}
+
+.preloader-body p {
+	position: relative;
+	right: -8px;
+}
+
+.cssload-container {
+	width: 100%;
+	height: 36px;
+	text-align: center;
+}
+
+.cssload-speeding-wheel {
+	width: 36px;
+	height: 36px;
+	margin: 0 auto;
+	border: 3px solid #6090f7;
+	border-radius: 50%;
+	border-left-color: transparent;
+	border-bottom-color: transparent;
+	animation: cssload-spin .88s infinite linear;
+}
+
+@keyframes cssload-spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}
